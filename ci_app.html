@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Insurance Application</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>HG CYBERGUARD</h1> <br>
+    <form action="submit_insurance_application.php" method="post">
+        <label for="name">Name of Proposer:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website">
+
+        <label for="address">Principal Address of Proposer:</label>
+        <input type="text" id="address" name="address">
+
+        <label for="description">Business Description:</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+
+        <label for="coverage">Desired Coverage:</label><br>
+        <input type="checkbox" id="cyber_extortion" name="coverage[]" value="Cyber/Privacy Extortion">
+        <label for="cyber_extortion">Cyber/Privacy Extortion</label><br>
+
+        <input type="checkbox" id="multimedia_liability" name="coverage[]" value="MultiMedia Liability">
+        <label for="multimedia_liability">MultiMedia Liability</label><br>
+
+        <input type="checkbox" id="network_interruption" name="coverage[]" value="Network Interruption">
+        <label for="network_interruption">Network Interruption</label><br><br>
+
+        <label for="data_protection_policy">Is there a written data protection policy and privacy policy that applies to the Company? [Yes or No]</label><br>
+        <input type="text" id="data_protection_policy" name="data_protection_policy" required><br><br>
+
+        <label for="data_protection_procedures">If "No", please provide details regarding data protection procedures for the Company:</label>
+        <textarea id="data_protection_procedures" name="data_protection_procedures" rows="4"></textarea><br>
+
+        <label for="employee_compliance">Are all employees provided with a copy and any update of the Company's data protection policy which they are required to confirm compliance with? [Yes or No]</label><br>
+        <input type="text" id="employee_compliance" name="employee_compliance" required><br><br>
+
+
+        <label for="compliance_explanation">If "No", please explain why not:</label>
+        <textarea id="compliance_explanation" name="compliance_explanation" rows="4"></textarea><br>
+
+        <label for="last_review">When was the Company's data protection policy last reviewed and by whom?</label>
+        <input type="text" id="last_review" name="last_review"><br>
+
+       
+
+        <label for="compliance_check">Does the Company's data protection policy comply with the data protection and privacy legislation applicable to all jurisdictions and Industry standards/requirements, in which the Company operates? [Yes or No]</label><br>
+        <input type="text" id="compliance_check" name="compliance_check" required><br><br>
+        
+
+<label for="non_compliance_explanation">If "No", please provide an explanation regarding non-compliance in all applicable jurisdictions:</label>
+<textarea id="non_compliance_explanation" name="non_compliance_explanation" rows="4"></textarea><br>
+
+<label for="safe_harbor">Have the Company's U.S. Subsidiary(ies) signed up for, and are they compliant with, the Safe Harbor Program between the United States of America and the European Union? [Yes or No]</label><br>
+<input type="text" id="safe_harbor" name="safe_harbor" required><br><br>
+
+
+<label for="safe_harbor_explanation">If "No", please provide an explanation regarding non-compliance with the Safe Harbor Program:</label>
+<textarea id="safe_harbor_explanation" name="safe_harbor_explanation" rows="4"></textarea><br>
+
+
+<label for="data_protection_officer">Does the Company employ a Chief Compliance Officer, Data Protection Officer and/or In-house Counsel responsible for data protection related matters? [Yes or No]</label><br>
+<input type="text" id="data_protection_officer" name="data_protection_officer" required><br><br>
+
+
+<label for="data_protection_responsible">If "No", who is responsible for data protection related matters?</label>
+<textarea id="data_protection_responsible" name="data_protection_responsible" rows="4"></textarea><br>
+
+<label for="firewall">Does the Company use firewalls to prevent unauthorized access connections from external networks and computer systems to internal networks? [Yes or No]</label><br>
+<input type="text" id="firewall" name="firewall" required><br><br>
+
+<label for="firewall_details">If "Yes", are all computer systems, mobile devices, and websites Firewalled or have intrusion prevention systems on them?</label>
+<textarea id="firewall_details" name="firewall_details" rows="4"></textarea><br>
+
+
+<label for="anti_virus">Does the Company use anti-virus protections and procedures on all desktops, e-mail systems, and mission-critical servers to protect against viruses, worms, spyware, and other malware? [Yes or No]</label><br>
+<input type="text" id="anti_virus" name="anti_virus" required><br><br>
+
+<label for="update_frequency">If "Yes," how often are such protections and procedures updated:</label><br>
+<input type="checkbox" id="daily" name="update_frequency[]" value="Daily">
+<label for="daily">Daily</label><br>
+<input type="checkbox" id="weekly" name="update_frequency[]" value="Weekly">
+<label for="weekly">Weekly</label><br>
+<input type="checkbox" id="monthly" name="update_frequency[]" value="Monthly">
+<label for="monthly">Monthly</label><br>
+<input type="checkbox" id="other" name="update_frequency[]" value="Other">
+<label for="other">Other (Please Specify):</label>
+<input type="text" id="update_frequency_other" name="update_frequency_other"><br>
+
+
+<label for="network_weakness">Does the Company have in place procedures to identify and detect network security weaknesses? [Yes or No]</label><br>
+<input type="text" id="network_weakness" name="network_weakness" required><br><br>
+
+<label for="monitor_breaches">Does the Company monitor its network and computer systems for Breaches of Data Security? [Yes or No]</label><br>
+<input type="text" id="monitor_breaches" name="monitor_breaches" required><br><br>
+
+<label for="physical_security">Does the company have physical security controls in place to prohibit and detect unauthorized access to their computer system and data centre? [Yes or No]</label><br>
+<input type="text" id="physical_security" name="physical_security" required><br><br>
+
+
+<label for="sensitive_data">Does the Company collect, store, maintain, or distribute credit card or other sensitive personally identifiable data?</label><br>
+<input type="checkbox" id="sensitive_data_credit_card" name="sensitive_data[]" value="Credit Card">
+<label for="sensitive_data_credit_card">Credit Card</label><br>
+<input type="checkbox" id="sensitive_data_pii" name="sensitive_data[]" value="Personally identifiable data">
+<label for="sensitive_data_pii">Personally identifiable data</label><br><br>
+
+<label for="pci_compliance">If "Credit Card" is selected above, does the company comply with Payment Card Industry Data Security Standards?</label><br>
+<input type="checkbox" id="pci_compliance_yes" name="pci_compliance[]" value="Yes">
+<label for="pci_compliance_yes">Yes</label><br>
+<input type="checkbox" id="pci_compliance_no" name="pci_compliance[]" value="No">
+<label for="pci_compliance_no">No</label><br><br>
+
+<label for="access_restriction">If either is selected, is the access to such sensitive data restricted?</label><br>
+<input type="checkbox" id="access_restriction_yes" name="access_restriction[]" value="Yes">
+<label for="access_restriction_yes">Yes</label><br>
+<input type="checkbox" id="access_restriction_no" name="access_restriction[]" value="No">
+<label for="access_restriction_no">No</label><br><br>
+
+<label for="access_users">Who has access?</label>
+<textarea id="access_users" name="access_users" rows="4"></textarea><br>
+
+<label for="payment_processing">Does the Company process payments on behalf of others, including eCommerce transactions? [Yes or No]</label><br>
+<input type="text" id="payment_processing" name="payment_processing" required><br><br>
+
+
+<label for="payment_details">If "Yes," please provide the number of clients you process such payments for and an estimated number of transactions per client:</label>
+<textarea id="payment_details" name="payment_details" rows="4"></textarea><br>
+
+<label for="encryption_requirements">Does the Company have encryption requirements for data-in-transit and data-at-rest to protect the integrity of Sensitive Data including data on portable media (e.g., laptops, DVD backup tapes, disk drives, USB devices, etc.)? [Yes or No]</label><br>
+<input type="text" id="encryption_requirements" name="encryption_requirements" required><br><br>
+
+
+<label for="encryption_description">If "Yes", please describe where such encryption is used:</label>
+<textarea id="encryption_description" name="encryption_description" rows="4"></textarea><br>
+
+<label for="backup_mission_critical">Does the Company have and maintain backup and recovery procedures for all mission critical systems? [Yes or No]</label><br>
+<input type="text" id="backup_mission_critical" name="backup_mission_critical" required><br><br>
+
+<label for="backup_data_assets">Does the Company have and maintain backup and recovery procedures for all data and information assets? [Yes or No]</label><br>
+<input type="text" id="backup_data_assets" name="backup_data_assets" required><br><br>
+
+<label for="encryption_backup">If "Yes" is it encrypted?</label><br>
+<input type="text" id="encryption_backup" name="encryption_backup" ><br><br>
+
+<label for="background_checks">Does the Company perform background checks on all employees and independent consultants? [Yes or No]</label><br>
+<input type="text" id="background_checks" name="background_checks" required><br><br>
+
+<label for="remote_authentication">Does the Company require remote users to be authenticated before being allowed to connect to internal networks and computer systems? [Yes or No]</label><br>
+<input type="text" id="remote_authentication" name="remote_authentication" required><br><br>
+
+<label for="outsourcing">Does the Company outsource any part of its network, computer system, or information security functions? [Yes or No]</label><br>
+<input type="text" id="outsourcing" name="outsourcing" required><br><br>
+
+
+
+
+<label for="security_outsourced">If "Yes," who is the security outsourced to? And does the Applicant periodically audit the functions of the outsourcer to ensure that they follow the Applicant's security policies?</label>
+<textarea id="security_outsourced" name="security_outsourced" rows="4"></textarea><br>
+
+<label for="data_outsourcing">Does the Company outsource any data collection and/or data processing? [Yes or No]</label><br>
+<input type="text" id="data_outsourcing" name="data_outsourcing" required><br><br>
+
+
+<label for="outsourced_details">If "Yes", please provide details of the data collection or data processing functions which are outsourced:</label>
+<textarea id="outsourced_details" name="outsourced_details" rows="4"></textarea><br>
+
+<label for="data_protection_insurance">Does the Company require the entities providing data collection or data processing functions (Outsourcers) to maintain their own data protection liability insurance? [Yes or No]</label><br>
+<input type="text" id="data_protection_insurance" name="data_protection_insurance" required><br><br>
+
+<label for="indemnification">Does the Company require indemnification from Outsourcers for any liability attributable to them? [Yes or No]</label><br>
+<input type="text" id="indemnification" name="indemnification" required><br><br>
+
+
+<label for="outsourcers_management">How does the Company select and manage Outsourcers?</label><br>
+<textarea id="outsourcers_management" name="outsourcers_management" rows="4"></textarea><br><br>
+
+
+
+
+
+<label for="outsourcers_compliance">Does the Company require all Outsourcers to comply with the terms of the Company's data protection policy? [Yes or No]</label><br>
+<input type="text" id="outsourcers_compliance" name="outsourcers_compliance" required><br><br>
+
+<label for="investigation_audit">Has the Company been the subject of any investigation or audit in relation to data protection by a Data Protection Authority or other regulator? [Yes or No]</label><br>
+<input type="text" id="investigation_audit" name="investigation_audit" required><br><br>
+
+
+<label for="investigation_details">If "Yes", please provide full details:</label><br>
+<textarea id="investigation_details" name="investigation_details" rows="4"></textarea><br>
+
+<label for="subject_access_request">Has the Company ever been subject to a Data Subject Access Request? [Yes or No]</label><br>
+<input type="text" id="subject_access_request" name="subject_access_request" required><br><br>
+
+
+<label for="access_request_details">If "Yes", please provide full details:</label><br>
+<textarea id="access_request_details" name="access_request_details" rows="4"></textarea><br>
+
+<label for="enforcement_notice">Has the Company ever been subject to an Enforcement Notice by a Data Protection Authority or any other regulator? [Yes or No]</label><br>
+<input type="text" id="enforcement_notice" name="enforcement_notice" required><br><br>
+
+
+<label for="enforcement_notice_details">If "Yes", please provide full details:</label><br>
+<textarea id="enforcement_notice_details" name="enforcement_notice_details" rows="4"></textarea><br>
+
+
+<label for="potential_claim">Is the Company, after due inquiry, aware of any actual or alleged fact or circumstance which may give rise to a claim under this policy? [Yes or No]</label><br>
+<input type="text" id="potential_claim" name="potential_claim" required><br><br>
+
+
+<label for="nationality">Nationality:</label><br>
+<input type="checkbox" id="indian" name="nationality[]" value="Indian">
+<label for="indian">Indian</label><br>
+<input type="checkbox" id="non_indian" name="nationality[]" value="Non-Indian">
+<label for="non_indian">Non-Indian</label><br>
+<label for="country_specify">If Non-Indian, please specify Country:</label>
+<input type="text" id="country_specify" name="country_specify"><br><br>
+
+<label>Type of Organization:</label><br>
+<input type="checkbox" id="corporations" name="organization_type[]" value="Corporations">
+<label for="corporations">Corporations</label><br>
+<input type="checkbox" id="governments" name="organization_type[]" value="Governments">
+<label for="governments">Governments</label><br>
+<input type="checkbox" id="ngos" name="organization_type[]" value="Non Governmental Organizations">
+<label for="ngos">Non Governmental Organizations</label><br>
+<input type="checkbox" id="society" name="organization_type[]" value="Society">
+<label for="society">Society</label><br>
+<input type="checkbox" id="intl_org" name="organization_type[]" value="International Organization">
+<label for="intl_org">International Organization</label><br>
+<input type="checkbox" id="trust" name="organization_type[]" value="Trust">
+<label for="trust">Trust</label><br>
+<input type="checkbox" id="partnership" name="organization_type[]" value="Partnership">
+<label for="partnership">Partnership</label><br>
+<input type="checkbox" id="cooperatives" name="organization_type[]" value="Cooperatives">
+<label for="cooperatives">Cooperatives</label><br>
+<input type="checkbox" id="sec_25_company" name="organization_type[]" value="Section 25 Company">
+<label for="sec_25_company">Section 25 Company</label><br><br>
+
+<label for="pan_number">PAN card number (10 character number):</label><br>
+<input type="text" id="pan_number" name="pan_number" maxlength="10"><br><br>
+
+<label>Sources of funds: Please tick appropriate box</label><br>
+<input type="checkbox" id="salary" name="funds_source[]" value="Salary">
+<label for="salary">Salary</label><br>
+<input type="checkbox" id="business" name="funds_source[]" value="Business">
+<label for="business">Business</label><br>
+<input type="checkbox" id="others" name="funds_source[]" value="Others">
+<label for="others">Others (please specify):</label>
+<input type="text" id="others_specify" name="others_specify"><br><br>
+
+<label for="sum_insured">Sum Insured [Rs.]</label><br>
+        <input type="range" id="sum_insured" name="sum_insured" min="50000" max="150000" step="1000" oninput="updateTextInput(this.value);" style="width: 100%;"><br>
+        <input type="text" id="sum_insured_text" name="sum_insured_text" style="width: 150px; height: 30px;" readonly><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form> <br>
+    <h1>HG CYBERGUARD</h1>
+</div>
+
+
+<script>
+    function updateTextInput(val) {
+        document.getElementById('sum_insured_text').value = val;
+    }
+</script>
+
+
+</body>
+</html>
